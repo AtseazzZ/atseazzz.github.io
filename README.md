@@ -2,6 +2,16 @@
 
 Atsea_zzZ 的小岛，一个用 VitePress 写成的个人博客。内容以技术札记为主，也保留一些生活记录。页面使用暖纸色、手绘线条和原创的“岛屿信使”作为视觉线索。
 
+## 网站预览
+
+### 桌面端
+
+![zzz-island 桌面端首页](screenshots/blog-desktop.png)
+
+### 移动端
+
+![zzz-island 移动端首页](screenshots/blog-mobile.png)
+
 ## 本地开发
 
 ```bash
