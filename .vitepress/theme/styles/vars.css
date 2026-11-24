@@ -1,0 +1,35 @@
+:root {
+  --paper: #f6efdf;
+  --paper-bright: #fffbef;
+  --paper-shadow: #e7dbc3;
+  --ink: #24271f;
+  --ink-muted: #59594b;
+  --moss: #425637;
+  --moss-wash: #e2e8d0;
+  --clay: #913f2f;
+  --clay-wash: #f5ded0;
+  --sky: #445766;
+  --sky-wash: #e2e9e7;
+  --rule: #c4b899;
+  --paper-shadow-small: 0 4px 0 rgb(67 51 26 / 8%);
+  --page-width: 68rem;
+  --reading-width: 45rem;
+  --gutter: clamp(1rem, 4vw, 2.75rem);
+  --font-heading: Georgia, 'Songti SC', 'Noto Serif CJK SC', SimSun, serif;
+  --font-copy: 'Segoe UI', 'PingFang SC', 'Microsoft YaHei', system-ui, sans-serif;
+  --font-note: 'Courier New', 'KaiTi', monospace;
+  --paper-grain: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAMAAAAM7l6QAAAACVBMVEUAAABnUjX///8TCmQIAAAAA3RSTlMAE2mv91ywAAAAoUlEQVR4nIVTAQ7EIAij/f+jL+4YFmjuzLKA0FIRI85CMO46NihbeL7zQ5CIGMmR8R8LPYUKwUh8N9hCNDjcODEZrKS1CWdXrdfXujBMzBxbRgOX7q8yQT6XYUBIFPP8GNFEGiWNDMRVUBfKou4E2gtuNnTfdUujNJiFvg4WFdc5pyWD3OanE1av6aWsofgOH/NpUPRCFKAylWe1o5Ri9vwDW88AyJXuRp0AAAAASUVORK5CYII=');
+
+  --vp-c-bg: var(--paper);
+  --vp-c-bg-alt: var(--paper-bright);
+  --vp-c-bg-elv: var(--paper-bright);
+  --vp-c-bg-soft: #ede5d4;
+  --vp-c-text-1: var(--ink);
+  --vp-c-text-2: var(--ink-muted);
+  --vp-c-divider: var(--rule);
+  --vp-c-border: var(--rule);
+  --vp-c-brand-1: var(--moss);
+  --vp-c-brand-2: var(--clay);
+  --vp-font-family-base: var(--font-copy);
+  --vp-code-block-bg: #eee5d3;
+}

@@ -1,0 +1,79 @@
+body {
+  background: var(--paper) var(--paper-grain);
+  color: var(--ink);
+  font-family: var(--font-copy);
+  overflow-wrap: anywhere;
+}
+
+.site-shell {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.site-shell main {
+  width: min(100% - 2 * var(--gutter), var(--page-width));
+  margin-inline: auto;
+  flex: 1;
+}
+
+.site-shell h1,
+.site-shell h2,
+.site-shell h3 {
+  font-family: var(--font-heading);
+  text-wrap: pretty;
+}
+
+.site-shell a:focus-visible,
+.site-shell button:focus-visible {
+  outline: 2px solid var(--clay);
+  outline-offset: 4px;
+}
+
+.site-shell ::selection {
+  background: var(--moss-wash);
+  color: var(--ink);
+}
+
+.site-shell :target {
+  scroll-margin-top: 1.25rem;
+}
+
+.eyebrow {
+  color: var(--moss);
+  font-weight: 650;
+  font-size: 0.78rem;
+  letter-spacing: 0.11em;
+  line-height: 1.6;
+}
+
+.site-shell .vp-doc {
+  color: var(--ink);
+  font-size: clamp(1rem, 0.975rem + 0.22vw, 1.08rem);
+  line-height: 1.92;
+}
+
+.site-shell .vp-doc h2 {
+  padding-top: 1.25rem;
+  border-top-color: var(--rule);
+  font-size: clamp(1.3rem, 1.1rem + 1vw, 1.7rem);
+}
+
+.site-shell .vp-doc h3 {
+  font-size: 1.2rem;
+}
+
+.site-shell .vp-doc p,
+.site-shell .vp-doc li {
+  line-height: inherit;
+}
+
+.site-shell .vp-doc blockquote {
+  padding-block: 0.2rem;
+  border-color: var(--rule);
+}
+
+.site-shell .vp-doc pre,
+.site-shell .vp-doc code {
+  overflow-wrap: normal;
+}
