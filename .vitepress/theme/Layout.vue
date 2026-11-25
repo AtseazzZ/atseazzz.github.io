@@ -66,7 +66,7 @@ const year = new Date().getFullYear()
         <div class="island-compass__mark"><IslandMark /></div>
         <div>
           <h2 id="compass-title">小岛罗盘</h2>
-          <p>技术札记收录前端实践和工具笔记。岛屿手记留给写代码以外的日常。</p>
+          <p>技术札记收录开发实践和工具笔记。岛屿手记留给写代码以外的日常。</p>
         </div>
         <div class="island-compass__links">
           <a class="text-link" href="/archive#技术札记">技术札记 <span aria-hidden="true">↗</span></a>
