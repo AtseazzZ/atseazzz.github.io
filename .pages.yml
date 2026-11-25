@@ -1,0 +1,67 @@
+media:
+  - name: post_images
+    label: 文章图片
+    input: public/images/posts
+    output: /images/posts
+    categories: [image]
+    extensions: [png, jpg, jpeg, webp, gif, svg]
+    rename: safe
+
+content:
+  - name: posts
+    label: 博客文章
+    type: collection
+    path: posts
+    format: yaml-frontmatter
+    subfolders: false
+    filename:
+      template: "{year}-{month}-{day}-{title}.md"
+      field: create
+    view:
+      fields: [title, date, category]
+      primary: title
+      sort: [date, title]
+      default:
+        sort: date
+        order: desc
+    fields:
+      - name: title
+        label: 标题
+        type: string
+        required: true
+      - name: description
+        label: 摘要
+        type: text
+        required: true
+      - name: date
+        label: 日期
+        type: date
+        required: true
+        options:
+          format: yyyy-MM-dd
+      - name: author
+        label: 作者
+        type: string
+        required: true
+      - name: category
+        label: 分类
+        type: select
+        required: true
+        options:
+          values:
+            - name: 技术札记
+              label: 技术札记
+            - name: 岛屿手记
+              label: 岛屿手记
+      - name: tags
+        label: 标签
+        type: string
+        list: true
+      - name: body
+        label: 正文
+        type: rich-text
+        required: true
+        options:
+          format: markdown
+          media: post_images
+          rename: safe

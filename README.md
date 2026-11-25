@@ -54,3 +54,9 @@ tags:
 ```
 
 在 frontmatter 下用 Markdown 写正文。首页、归档页和上一篇／下一篇会在构建时按日期自动更新。
+
+## 在线发布文章
+
+仓库根目录的 `.pages.yml` 已配置 Pages CMS 文章编辑器。首次使用时，访问 [Pages CMS](https://app.pagescms.org/) 并用 GitHub 登录，授权应用访问 `AtseazzZ/atseazzz.github.io`，然后选择 `main` 分支。不要邀请其他 Pages CMS 协作者。任何拥有该仓库写入权限的账号都能发布文章。
+
+在 Pages CMS 的「博客文章」集合中新建文章，填写标题、摘要、日期、作者、分类和标签，再用正文编辑器撰写 Markdown。插入图片时，图片会保存到 `public/images/posts/`，文章中会使用 `/images/posts/` 路径。保存后 CMS 会将更改提交到 GitHub，推送到 `main` 后由 GitHub Actions 自动构建和发布。
