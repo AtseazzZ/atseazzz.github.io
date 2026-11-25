@@ -35,6 +35,8 @@ jobs:
         run: npm ci
 
       - name: Build site
+        env:
+          VITE_WALINE_SERVER_URL: ${{ vars.VITE_WALINE_SERVER_URL }}
         run: npm run docs:build
 
       - name: Verify generated pages

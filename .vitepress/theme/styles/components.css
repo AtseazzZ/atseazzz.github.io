@@ -669,6 +669,123 @@
   line-height: 1.65;
 }
 
+.friends-page {
+  padding-bottom: 1.25rem;
+}
+
+.friends-page__intro {
+  padding-block: clamp(2.3rem, 6vw, 4.9rem) 1.6rem;
+  border-bottom: 1px solid var(--rule);
+}
+
+.friends-page__intro h2,
+.friends-comments__header h2 {
+  margin-block: 0.55rem 0.8rem;
+  font-size: clamp(2rem, 1.45rem + 2.5vw, 3.4rem);
+  line-height: 1.2;
+}
+
+.friends-page__intro > p:last-child,
+.friends-comments__header > p:last-child {
+  max-width: 38rem;
+  color: var(--ink-muted);
+  font-size: 1rem;
+  line-height: 1.8;
+}
+
+.friends-list {
+  margin-top: 1.5rem;
+}
+
+.friends-empty {
+  position: relative;
+  padding: clamp(1.35rem, 4vw, 2.1rem);
+  border: 1px solid var(--rule);
+  border-radius: 3px 5px 4px 2px;
+  background: var(--paper-bright) var(--paper-grain);
+  box-shadow: var(--paper-shadow-small);
+}
+
+.friends-empty::before {
+  position: absolute;
+  inset: 0;
+  border: 1px solid var(--rule);
+  border-radius: 2px 4px 3px 5px;
+  content: '';
+  transform: rotate(-0.4deg) translateY(4px);
+  pointer-events: none;
+}
+
+.friends-empty__stamp {
+  display: inline-block;
+  padding: 0.15rem 0.45rem;
+  border: 1px solid var(--clay);
+  border-radius: 2px 3px 3px 1px;
+  color: var(--clay);
+  background: var(--clay-wash) var(--paper-grain);
+  font: 0.75rem/1.45 var(--font-note);
+  transform: rotate(-4deg);
+}
+
+.friends-empty h3 {
+  margin-top: 0.9rem;
+  font-size: clamp(1.35rem, 1.1rem + 1vw, 1.8rem);
+}
+
+.friends-empty p {
+  margin-top: 0.45rem;
+  color: var(--ink-muted);
+  line-height: 1.75;
+}
+
+.friends-comments {
+  margin-top: clamp(2.6rem, 6vw, 4.5rem);
+  padding-top: 1.4rem;
+  border-top: 1px solid var(--rule);
+}
+
+.friends-comments__header {
+  margin-bottom: 1.1rem;
+}
+
+.waline-shell {
+  --waline-theme-color: var(--moss);
+  --waline-active-color: var(--clay);
+  --waline-bg-color: var(--paper-bright);
+  --waline-bg-color-light: var(--paper);
+  --waline-border-color: var(--rule);
+  --waline-info-bg-color: var(--paper-shadow);
+  --waline-info-color: var(--ink-muted);
+  --waline-disable-bg-color: var(--paper-shadow);
+  --waline-disable-color: var(--ink-muted);
+  padding: clamp(0.85rem, 3vw, 1.35rem);
+  border: 1px solid var(--rule);
+  border-radius: 3px 5px 4px 2px;
+  background: var(--paper-bright) var(--paper-grain);
+  box-shadow: var(--paper-shadow-small);
+}
+
+.waline-state {
+  margin: 0;
+  color: var(--ink-muted);
+  font: 0.86rem/1.75 var(--font-note);
+}
+
+.waline-state--error {
+  color: var(--clay);
+}
+
+.waline-shell .wl-editor,
+.waline-shell .wl-input,
+.waline-shell .wl-card {
+  border-color: var(--rule);
+  background: var(--paper);
+}
+
+.waline-shell .wl-btn {
+  border-radius: 3px 2px 4px 3px;
+}
+
 @media (max-width: 52rem) {
   .article-page {
     grid-template-columns: minmax(0, var(--reading-width));

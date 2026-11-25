@@ -19,6 +19,7 @@ export default defineConfig({
     nav: [
       { text: '小岛首页', link: '/' },
       { text: '归档', link: '/archive' },
+      { text: '友链', link: '/friends' },
       { text: '关于小岛', link: '/about' },
     ],
     socialLinks: [
