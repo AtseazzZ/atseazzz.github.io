@@ -16,6 +16,7 @@ test('passes the public Waline server URL into the production build', async () =
 
 test('configures nickname and email without a removed client avatar option', async () => {
   const component = await readFile(componentFile, 'utf8')
+  assert.match(component, /\s:serverURL="serverURL"/, 'Waline requires the exact serverURL prop name')
 
   assert.match(component, /:required-meta="\['nick', 'mail'\]"/)
   assert.match(component, /login="disable"/)

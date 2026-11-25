@@ -31,7 +31,7 @@ onMounted(async () => {
     <component
       :is="walineComponent"
       v-else-if="walineComponent"
-      :server-url="serverURL"
+      :serverURL="serverURL"
       path="/friends"
       :required-meta="['nick', 'mail']"
       login="disable"
