@@ -1,5 +1,5 @@
 import assert from 'node:assert/strict'
-import { readFile } from 'node:fs/promises'
+import { access, readFile } from 'node:fs/promises'
 import { test } from 'node:test'
 
 const outputDirectory = new URL('../.vitepress/dist/', import.meta.url)
@@ -26,4 +26,13 @@ test('build emits the home, archive, about, friends, and both post pages', async
   assert.match(pages[3], /友链正在整理中/)
   assert.match(pages[4], /把一个页面慢慢点亮/)
   assert.match(pages[5], /给静态网站留一盏小灯/)
+})
+
+test('the friends page only preloads modules that exist in the build', async () => {
+  const page = await readFile(new URL('friends.html', outputDirectory), 'utf8')
+  const preloadLinks = page.matchAll(/<link rel="modulepreload" href="\/([^"?#]+)"/g)
+
+  for (const [, path] of preloadLinks) {
+    await access(new URL(path, outputDirectory))
+  }
 })

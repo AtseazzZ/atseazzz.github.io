@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import { onMounted, ref } from 'vue'
+import '@waline/client/style'
 
 const serverURL = (import.meta.env.VITE_WALINE_SERVER_URL || '').trim()
 const walineComponent = ref()
@@ -9,10 +10,7 @@ onMounted(async () => {
   if (!serverURL) return
 
   try {
-    const [{ Waline }] = await Promise.all([
-      import('@waline/client/component'),
-      import('@waline/client/style'),
-    ])
+    const { Waline } = await import('@waline/client/component')
     walineComponent.value = Waline
   } catch {
     loadError.value = true
